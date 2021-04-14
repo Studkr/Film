@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WOT</string>
+    <string name="error">Error</string>
+    <string name="ok">Ok</string>
+    <string name="gold">%1$s золота</string>
+    <string name="silver">%1$s серебро</string>
+    <string name="panzer_title">Show List</string>
+    <string name="filter">Фильтры</string>
+</resources>

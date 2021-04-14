@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:cardBackgroundColor="@color/dark_grey"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/filmImage"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/filmName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textAlignment="viewStart"
+            android:textColor="@color/mat_white"
+            app:layout_constraintBottom_toBottomOf="@+id/favButton"
+            app:layout_constraintEnd_toStartOf="@+id/favButton"
+            app:layout_constraintStart_toEndOf="@+id/voiteProgress"
+            app:layout_constraintTop_toTopOf="@+id/favButton" />
+
+        <ProgressBar
+            android:id="@+id/voiteProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:indeterminate="false"
+            android:max="10"
+            android:progress="7"
+            android:progressDrawable="@drawable/custom_circular_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filmImage" />
+
+        <TextView
+            android:id="@+id/filmReiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/voiteProgress"
+            app:layout_constraintEnd_toEndOf="@+id/voiteProgress"
+            app:layout_constraintStart_toStartOf="@+id/voiteProgress"
+            app:layout_constraintTop_toTopOf="@+id/voiteProgress"
+            tools:text="8.4" />
+
+        <ImageView
+            android:id="@+id/favButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/transparent_clickable_item_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filmImage"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
