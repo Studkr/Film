@@ -1,7 +1,7 @@
 package com.example.weather.ui.details.adapter
 
 import com.airbnb.epoxy.TypedEpoxyController
-import com.example.weather.domain.use_case.models.MovieDetailsModel
+import com.example.weather.repository.models.MovieDetailsModel
 
 class MovieDetailsController(
     val favoriteClicked:(model:MovieDetailsModel)-> Unit

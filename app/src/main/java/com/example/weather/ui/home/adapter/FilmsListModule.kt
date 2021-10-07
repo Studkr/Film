@@ -2,7 +2,7 @@ package com.example.weather.ui.home.adapter
 
 import com.airbnb.epoxy.TypedEpoxyController
 import com.airbnb.epoxy.carousel
-import com.example.weather.domain.use_case.models.MovieModel
+import com.example.weather.repository.models.MovieModel
 import com.example.weather.ui.home.CombineModel
 
 class FilmsListModule(

@@ -6,7 +6,7 @@ import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.example.weather.R
-import com.example.weather.domain.use_case.models.SerialsModel
+import com.example.weather.repository.models.SerialsModel
 import com.example.weather.system.loadImage
 
 @EpoxyModelClass(

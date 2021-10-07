@@ -11,6 +11,8 @@ data class FavoriteFilmEntity (
     @ColumnInfo(name = "show_name")
     val showName:String,
     @ColumnInfo(name = "image")
-    val image:String
+    val image:String,
+    @ColumnInfo(name = "reith")
+    val reith:Double
     )
 

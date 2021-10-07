@@ -7,9 +7,8 @@ import android.widget.TextView
 import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
-import com.airbnb.epoxy.TypedEpoxyController
 import com.example.weather.R
-import com.example.weather.domain.use_case.models.FavoriteModel
+import com.example.weather.repository.models.FavoriteModel
 import com.example.weather.system.BaseEpoxyHolder
 import com.example.weather.system.loadImage
 

@@ -1,10 +1,8 @@
 package com.example.weather.ui.home.adapter
 
-import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.DecelerateInterpolator
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -12,12 +10,11 @@ import com.airbnb.epoxy.EpoxyAttribute
 import com.airbnb.epoxy.EpoxyModelClass
 import com.airbnb.epoxy.EpoxyModelWithHolder
 import com.example.weather.R
-import com.example.weather.domain.use_case.models.MovieModel
+import com.example.weather.repository.models.MovieModel
 
 import com.example.weather.system.BaseEpoxyHolder
 import com.example.weather.system.loadImage
 import com.google.android.material.imageview.ShapeableImageView
-import com.google.android.material.progressindicator.CircularProgressIndicator
 
 @EpoxyModelClass(
     layout = R.layout.item_holder_film_card

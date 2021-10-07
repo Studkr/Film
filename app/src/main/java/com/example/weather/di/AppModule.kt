@@ -2,32 +2,24 @@ package com.example.weather.di
 
 import android.app.Application
 import android.content.Context
-import com.example.weather.db.DataBaseModule
-import com.example.weather.repository.RepositoryModule
-import com.example.weather.ui.activity.MainActivityModule
-import com.example.weather.ui.splash.SplashActivityModule
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import javax.inject.Named
 import javax.inject.Singleton
 
-@Module(
-    includes = [
-        CoroutineContextModule::class,
-        SplashActivityModule::class,
-        MainActivityModule::class,
-        RepositoryModule::class,
-        DataBaseModule::class,
-    ]
-)
-class AppModule(val app: Application) {
+
+@InstallIn(SingletonComponent::class)
+@Module
+class AppModule() {
     @Provides
-    fun contex(): Context = app
+    fun provideContext(application: Application): Context = application.applicationContext
 }
 
+@InstallIn(SingletonComponent::class)
 @Module
 class CoroutineContextModule {
     @Provides

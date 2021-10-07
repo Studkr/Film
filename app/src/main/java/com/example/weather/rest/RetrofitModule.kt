@@ -4,6 +4,8 @@ import com.example.weather.BuildConfig
 import com.example.weather.Constants
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Converter
@@ -11,6 +13,7 @@ import javax.inject.Named
 import javax.inject.Singleton
 
 
+@InstallIn(SingletonComponent::class)
 @Module(includes = [JsonModule::class])
 class RetrofitModule {
 

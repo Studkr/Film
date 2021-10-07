@@ -2,28 +2,24 @@ package com.example.weather.ui.details
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.weather.R
-import com.example.weather.di.viewmodel.ViewModelFactory
-import com.example.weather.system.BaseFragment
 import com.example.weather.system.loadImage
 import com.example.weather.system.observe
 import com.example.weather.ui.details.adapter.MovieDetailsController
 import com.idapgroup.argumentdelegate.argumentDelegate
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_details_fragment.*
-import javax.inject.Inject
 
-class FragmentDetails : BaseFragment(R.layout.fragment_details_fragment) {
+@AndroidEntryPoint
+class FragmentDetails : Fragment(R.layout.fragment_details_fragment) {
 
 
     val id: Long by argumentDelegate()
 
-    @Inject
-    lateinit var factory:ViewModelFactory
-
-    private val viewModel: FragmentDetailsViewModel by viewModels {factory}
+    private val viewModel: FragmentDetailsViewModel by viewModels ()
 
     private val controller = MovieDetailsController{
             viewModel.saveToFavorite(it)

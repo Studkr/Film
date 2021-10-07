@@ -14,4 +14,7 @@ interface MovieDao {
 
     @Query("SELECT * FROM  fav_films")
     fun getMovieList(): List<FavoriteFilmEntity>
+
+    @Query("SELECT * FROM fav_films WHERE reith >7 ")
+    fun returnReith():List<FavoriteFilmEntity>
 }
